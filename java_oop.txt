@@ -1,0 +1,137 @@
+ Create an executable jar with IntelliJ
+-----------------------------------------
+1. File , Project Structure , Artifacts , (+) , JAR ,  jar from 
+       module with dependencies
+2. Main Class: select the class containing your main method
+3. OK
+3. Change output directory to where you want this JAR saved to
+6. Apply , OK
+7. Build (top of window in IntelliJ) , Build Artifacts , Build
+ 
+ To run: java -jar progName.jar
+ 
+ 
+ 
+ public:     visible in all classes in all packages
+ protected:  visible to all classes in the same package or classes 
+                      in other packages that are a subclass
+ default:    visible to all classes in the same package 
+ private:    visible only in the same class
+ 
+ 
+ super = keyword refers to the superclass (parent) of an object
+      very similar to the "this" keyword
+
+ 
+
+
+
+
+1. Inharitance    (implements)
+---------------------------
+The process where one class acquires, the attributes and
+ methods of only one another class.
+
+  public class Animal{}
+   public class Cat extends Mammal{}
+    public class Mammal extends Animal{}
+
+
+2.       interface    (implements)
+--------------------------
+Interface is a  template  that can be apllied  to a class.
+It is simler to 'Inharitance', but it spcifies what a class  must 
+do. 
+Class  can apllied more than one interface.
+
+Interfaces specify what a class must do and not how. 
+Interface can have methods and variables.
+
+Methods declared in an interface are by default abstract (only method signature, no body).  
+To implement interface use   'implements'   keyword.
+ 
+public class Main {
+
+    public static void main(String[] args) {
+        TestClass t = new TestClass();
+        t.display();
+        System.out.println(t.a);
+    }
+}
+
+interface In1 {
+    int a = 10;     // public, static and final
+    void display();     // public and abstract
+}
+
+class TestClass implements In1 {
+    void display() {
+        System.out.println("Geek");
+    }
+}
+// Output: Geek 10
+
+ 
+ 
+3. Abstruct  (extends)
+-------------------------
+ 
+public abstract class Car {
+  //1) Don't instantiate a new Car class. ->Car Audi != new Car()
+  //2) This class doesn't provide implementation for the methods.
+
+     protected int doors;
+     public abstract void setDoors();
+}
+
+public class Limo extends Car {
+    @Override
+    public void setDoors() {
+        this.doors=12;
+    }
+}
+
+4.enum  
+-----------------
+You should use enum types any time you need to represent 
+a fixed set of constants. That includes natural enum types such 
+as the planets in our solar system and data sets where you know 
+all possible values at compile time—for example, the choices on 
+a menu, command line flags, and so on.
+
+
+public enum Day {
+    SUNDAY, MONDAY, TUESDAY, WEDNESDAY,
+    THURSDAY, FRIDAY, SATURDAY 
+}
+
+ 
+
+public class EnumTest {
+    Day day;
+    
+    public EnumTest(Day day) {
+        this.day = day;
+    }
+	 public void tellItLikeItIs() {
+        switch (day) {
+            case MONDAY:
+                System.out.println("Mondays are bad.");
+                break;
+        }           
+		
+		
+	
+ How to attach a 3rd party Jar to a  project in intellj IDEA.
+---------------------------------------------------------------
+    Copy the new Jar to your libs/ directory
+    Open Project Settings (Ctrl Alt Shift S)
+    Under the Project Settings panel on the left, choose Modules
+    On the larger right pane, choose the Dependencies tab
+    Press the Add... button on the far right of the screen (if you have a smaller screen like me, you may have to drag resize to the right in order to see it)
+    From the dropdown of Add options, choose "Library". A "Choose Libraries" dialog will appear.
+    Press "New Library..."
+    Choose a suitable title for the library
+    Press "Attach Classes..."
+    Choose the Jar from your libs/ directory, and press OK to dismiss
+	

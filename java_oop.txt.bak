@@ -1,0 +1,80 @@
+ public:     visible in all classes in all packages
+ protected:  visible to all classes in the same package or classes 
+                      in other packages that are a subclass
+ default:    visible to all classes in the same package 
+ private:    visible only in the same class
+ 
+ 
+ super = keyword refers to the superclass (parent) of an object
+      very similar to the "this" keyword
+
+ 
+
+
+
+
+1. Inharitance    (implements)
+---------------------------
+The process where one class acquires, the attributes and
+ methods of only one another class.
+
+  public class Animal{}
+   public class Cat extends Mammal{}
+    public class Mammal extends Animal{}
+
+
+2.       interface    (implements)
+--------------------------
+Interface is a  template  that can be apllied  to a class.
+It is simler to 'Inharitance', but it spcifies what a class  must 
+do. 
+Class  can apllied more than one interface.
+
+Interfaces specify what a class must do and not how. 
+Interface can have methods and variables.
+
+Methods declared in an interface are by default abstract (only method signature, no body).  
+To implement interface use   'implements'   keyword.
+ 
+public class Main {
+
+    public static void main(String[] args) {
+        TestClass t = new TestClass();
+        t.display();
+        System.out.println(t.a);
+    }
+}
+
+interface In1 {
+    int a = 10;     // public, static and final
+    void display();     // public and abstract
+}
+
+class TestClass implements In1 {
+    void display() {
+        System.out.println("Geek");
+    }
+}
+// Output: Geek 10
+
+ 
+ 
+3. Abstruct  (extends)
+-------------------------
+ 
+public abstract class Car {
+  //1) Don't instantiate a new Car class. ->Car Audi != new Car()
+  //2) This class doesn't provide implementation for the methods.
+
+     protected int doors;
+     public abstract void setDoors();
+}
+
+public class Limo extends Car {
+    @Override
+    public void setDoors() {
+        this.doors=12;
+    }
+}
+
+
