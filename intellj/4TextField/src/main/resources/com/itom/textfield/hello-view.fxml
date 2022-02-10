@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="417.0" prefWidth="452.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.itom.textfield.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Slider fx:id="slider0100" onMouseReleased="#upDateText" showTickLabels="true" showTickMarks="true" value="34.0" />
+   <RadioButton fx:id="Dog" mnemonicParsing="false" text=" Dog">
+      <font>
+         <Font name="System Bold Italic" size="24.0" />
+      </font>
+      <toggleGroup>
+         <ToggleGroup fx:id="Animal" />
+      </toggleGroup>
+   </RadioButton>
+   <RadioButton fx:id="Cat" mnemonicParsing="false" text="Cat" toggleGroup="$Animal">
+      <font>
+         <Font size="23.0" />
+      </font>
+   </RadioButton>
+   <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="200.0" />
+   <Text fx:id="nameout" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="154.9367127418518">
+      <font>
+         <Font size="25.0" />
+      </font>
+   </Text>
+   <TextField fx:id="namein">
+      <font>
+         <Font size="29.0" />
+      </font>
+   </TextField>
+
+    <Label fx:id="welcomeText" text="label" />
+    <Button onMouseClicked="#nameChane" text="Hello!" />
+</VBox>

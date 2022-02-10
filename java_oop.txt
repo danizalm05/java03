@@ -11,6 +11,13 @@
  To run: java -jar progName.jar
  
  
+ ------------------------
+ Export JavaFX 11, 15 or 17 projects into an executable jar file with IntelliJ [2022]
+ https://www.youtube.com/watch?v=F8ahBtXkQzU&list=PLrzWQu7Ajpi26jZvP8JhEJgFPFEj_fojO&index=23
+ ----------------------
+ 
+ 
+ 
  
  public:     visible in all classes in all packages
  protected:  visible to all classes in the same package or classes 
