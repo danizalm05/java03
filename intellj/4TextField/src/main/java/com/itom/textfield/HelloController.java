@@ -10,6 +10,8 @@ package com.itom.textfield;
 
         import javafx.fxml.FXML;
         import javafx.scene.control.*;
+        import javafx.scene.input.KeyCode;
+        import javafx.scene.input.KeyEvent;
         import javafx.scene.input.MouseEvent;
         import javafx.scene.text.Text;
 
@@ -58,6 +60,17 @@ public class HelloController {
     void upDateText(MouseEvent event) {
         textArea.setText(String.valueOf((int)slider0100.getValue()));
         System.out.println("Slider event");
+    }
+    @FXML
+    void show(KeyEvent event) { //key pressed
+      if(event.getCode() == KeyCode.ENTER){
+          System.out.println("Enter key Pressed");
+
+      }
+        if(event.getCode() == KeyCode.SPACE){
+            System.out.println("SPACE key Pressed");
+       
+        }
     }
 
 }

@@ -1,34 +1,81 @@
 C:\Program Files\Java\jdk-10.0.2
  
 java sdk 17.0.
-https://download.oracle.com/java/17/latest/jdk-17_windows-x64_bin.exe
+//https://download.oracle.com/java/17/latest/jdk-17_windows-x64_bin.exe
 C:\Program Files\Common Files\Oracle\Java
 
 How to setup JavaFX 11+ or 17 with IntelliJ  
 
 ----------------------------------------------
+https://www.youtube.com/watch?v=Ope4icw6bVk&list=PLZPZq0r_RZOM-8vJA3NQFZB7JroDcMwev&index=2
+
+Download zip  file from:
 https://www.codejava.net/java-se/download-and-install-openjdk-17
 
-https://www.youtube.com/watch?v=Ope4icw6bVk&list=PLZPZq0r_RZOM-8vJA3NQFZB7JroDcMwev&index=2
+run:
+ certutil  -hashfile   openjdk-17.0.2_windows-x64_bin.zip   sha256
+
+output:
+ SHA256 hash of openjdk-17.0.2_windows-x64_bin.zip:
+ b2208206bda47f2e0c971a39e057a5ec32c40b503d71e486790cb728d926b615
+ CertUtil: -hashfile command completed successfully.
+
+system environment  varibles
+Move to lower window  edit the java home
+add "C:\Program Files\Java\jdk-17.0.2\bin"
+
+
+
+How to setup JavaFX 11+ or 17 with IntelliJ on Windows [2022]
+------------------------------------------------
 https://www.youtube.com/watch?v=WDaXpDtYk3E&list=PLrzWQu7Ajpi26jZvP8JhEJgFPFEj_fojO
+1:01
 
-
+download "https://gluonhq.com/products/javafx/"   x64 SDK
 
 
 https://openjfx.io/openjfx-docs/     chose JavaFX and IntelliJ(left side)
 
+
+VM options:  Changing VM  in Run Configuration will cause an error
+
+
+project structure/lib
 Run -> Edit Configurations...
 
  Scene Builder :     https://gluonhq.com/products/scene-builder/#download
  
  
- Export JavaFX 11, 15 or 17 projects into an executable jar file with IntelliJ [2022]
+ Export JavaFX 17 projects into an executable jar file with IntelliJ [2022]
+ -----------------------------------------------------------
  https://www.youtube.com/watch?v=F8ahBtXkQzU&list=PLrzWQu7Ajpi26jZvP8JhEJgFPFEj_fojO&index=22
- 1. Create a new  class.
+ 1. Create a new  class  In src directory.  Main_1
+    and add :
+	   public static void main(String[] args) {
+          HelloApplication.main(args)  ;
+    } 
+    }
+   The "HelloApplication" is the class that contains the main  method
+  
+ 2.File/Project Structure
  
- 
- 5.  artifacts/ Artifacts / + / jar / From module with dependcies
+   artifacts/ Artifacts / + / jar / From module with dependcies
       Chose the main  file as the new class name from stage 1
-       Add the *.dll files in /bin directory
+ 3./add/file
+ 
+   Add all the *.dll files in 
+       C:\Program Files\Java\javafx-sdk-17.0.2\bin
 	   
-6. Build /Build artifact	   
+4. Build /Build artifact	   
+  the result is stored in /out  directory
+  
+  
+  ==================
+  re-create the jar artifact, 
+   choosing JAR > From modules with dependencies, 
+    but not accepting the default Directory for 
+	 META-INF/MANIFEST.MF. 
+	 Change it from -/src/main/java to -/src/main/resources.
+
+Otherwise it was including a manifest file in the jar,
+ but not the one in -/src/main/java that it should have.

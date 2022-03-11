@@ -1,0 +1,17 @@
+C:\Program Files\Java\jdk-17.0.2\bin\java.exe" "
+-javaagent:C:\Program Files\JetBrains\IntelliJ
+IDEA Community Edition 2021.3\lib\idea_rt.jar=1091:
+C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3\
+bin" -Dfile.encoding=UTF-8
+-classpath C:\Users\gilfm\.m2\repository\org\openjfx\javafx-controls\17.0.1\javafx-controls-17.0.1.jar;
+C:\Users\gilfm\.m2\repository\org\openjfx\javafx-graphics\17.0.1\javafx-graphics-17.0.1.jar;
+C:\Users\gilfm\.m2\repository\org\openjfx\javafx-base\17.0.1\javafx-base-17.0.1.jar;
+C:\Users\gilfm\.m2\repository\org\openjfx\javafx-fxml\17.0.1\javafx-fxml-17.0.1.jar -p
+C:\Users\gilfm\.m2\repository\org\openjfx\javafx-graphics\17.0.1\javafx-graphics-17.0.1-win.jar;
+C:\Users\gilfm\.m2\repository\org\openjfx\javafx-fxml\17.0.1\javafx-fxml-17.0.1-win.jar;
+C:\Users\gilfm\.m2\repository\org\openjfx\javafx-controls\17.0.1\javafx-controls-17.0.1-win.jar;
+C:\Users\gilfm\Documents\d\java03\intellj\FileGUI\target\classes;
+C:\Users\gilfm\.m2\repository\org\openjfx\javafx-base\17.0.1\javafx-base-17.0.1-win.jar -m
+com.example.filegui/com.example.filegui.HelloApplication
+
+Process finished with exit code 0

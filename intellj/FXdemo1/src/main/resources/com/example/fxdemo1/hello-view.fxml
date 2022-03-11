@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="271.0" prefWidth="440.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="com.example.fxdemo1.FXController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Text fx:id="text" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="265.70198583602905">
+      <font>
+         <Font name="System Bold" size="25.0" />
+      </font>
+   </Text>
+   <Button mnemonicParsing="false" onMouseClicked="#getText" text="Button" />
+   <Spinner fx:id="spinner" prefHeight="146.0" prefWidth="288.0" />
+
+    <Label fx:id="welcomeText" />
+</VBox>
