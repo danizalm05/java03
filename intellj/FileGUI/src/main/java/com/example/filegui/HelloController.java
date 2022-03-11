@@ -9,8 +9,10 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Scanner;
 
 public class HelloController implements Initializable {
     FileChooser fileChooser = new FileChooser();
@@ -34,6 +36,17 @@ public class HelloController implements Initializable {
     @FXML
     void getText(MouseEvent event) {
         File file = fileChooser.showOpenDialog(new Stage());
+
+        if(file != null){
+            try {
+                Scanner scanner = new Scanner(file);
+                while(scanner.hasNextLine()){
+                    textArea.appendText(scanner.nextLine() + "\n");
+                }
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
   @Override
