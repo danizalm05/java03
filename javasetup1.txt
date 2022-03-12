@@ -37,7 +37,7 @@ download "https://gluonhq.com/products/javafx/"   x64 SDK
 https://openjfx.io/openjfx-docs/     chose JavaFX and IntelliJ(left side)
 
 
-VM options:  Changing VM  in Run Configuration will cause an error
+ 
 
 
 project structure/lib
