@@ -1,6 +1,6 @@
  Create an executable jar with IntelliJ
 -----------------------------------------
-1. File , Project Structure , Artifacts , (+) , JAR ,  jar from 
+1.     File , Project Structure , Artifacts , (+) , JAR ,  jar from 
        module with dependencies
 2. Main Class: select the class containing your main method
 3. OK
