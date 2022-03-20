@@ -1,3 +1,7 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Main-Class: com.example.filegui.Main_1
+=======
+Main-Class: com.example.filegui.HelloApplication
+>>>>>>> c8c2f67b0021140f8428a8c2375d4f84654f383a
 
